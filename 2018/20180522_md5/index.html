@@ -76,7 +76,7 @@ void md5::md5_str(const char cstr[], char *cipher) {
 	// 余数（填充消息的长度）
 	US group_modulus = expect_length % 64;
 	// 分组总数
-	ULL group_count = (expect_length >> 6) + (group_modulus == 0 ? 0 : 1);
+	ULL group_count = (expect_length >> 6) + 1;
 	// 消息填充的字节数
 	US msg_padding_byte = (64 - group_modulus) & 0x3F;
 	// 长度填充的字节数（紧随输入的第一个字节）
