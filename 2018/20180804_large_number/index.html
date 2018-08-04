@@ -157,8 +157,10 @@ void large_number_calculation::runAdd() {
 		// 设置值
 		(*current).v = R;
 		// 移至下一个
-		if (pA != NULL || pB != NULL) {
+		if (pA != NULL) {
 			pA = (*pA).prev;
+		}
+		if ( pB != NULL) {
 			pB = (*pB).prev;
 		}
 		// 创建新节点
